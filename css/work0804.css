@@ -1,0 +1,55 @@
+body{
+	margin: 0 auto;
+	height: 100%;
+}
+
+#wrapper{
+	min-height: 100%;
+	margin-bottom: -100px; 
+}
+#banner{
+	/*border:5px solid yellow;  */
+	height: 160px;
+	width: 100%;
+
+
+}
+#logo{
+	/*border:2px solid #ff0000;  */
+	width:10%;
+	height:70PX;
+	margin-left: 3%;
+	
+}
+#logo img{
+	width: 100%;
+	height: 100%;
+}
+.fig{
+	/*border:2px solid #ff00ff;  */
+	width:50px;
+	height:50px;
+	margin:5px;
+	float: right;	
+}
+.fig img{
+	width: 100%;
+	height: 100%;
+}
+#content{
+	border:3px solid #cccccc;  
+	width:100%;
+	min-height:300PX; 
+}
+.pic{
+	/*border:2px solid #ff0000; */ 
+	width:20%;
+	height:200PX;
+	float: left;
+	padding: 10px;
+	margin: 20px;
+}
+.pic img{
+	width: 100%;
+	height: 100%;
+}
