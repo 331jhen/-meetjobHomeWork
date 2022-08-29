@@ -1,0 +1,176 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<title>作業0830</title>
+	<style type="text/css">
+		#banner{
+			width:100%;
+			height: 10%;
+		}
+		#menu{
+			width:100%;
+			height: 10%;
+			background-color: #555;
+		}
+
+		#pictureAll{
+			width:100%;
+			height: 40%;
+		}
+		#fold{
+			width:100%;
+			height: 10%;
+		}
+		#agebtn{
+			width:100%;
+			height: 20%;
+		}
+
+		#menulist{
+			position: absolute; /*定位:fix固定   absolute依照父'位置做絕對位置*/
+			height: 70px
+
+
+		}
+		#menulist , #menulist ul{  /*自己吃*/
+			list-style:none;
+			padding:0;
+			margin: 0;
+
+		}
+		#menulist li{
+			border-right:solid #ffffff;
+			float :left;
+			background-color: #555;
+			
+		}
+		#menulist a {
+			color:#ffffff;
+			display: block;
+			text-decoration:none;
+			width:80px;
+		}
+		#menulist li ul{
+			position: absolute;
+			left: auto;/*對於絕對位置元素內 會依內容需要的寬度來設置*/
+			width: 80px;
+		}
+		#pictureAll{
+ 		width: 100%;
+ 		height: 50%;
+ 		background-color: #999;
+ 	}
+
+
+
+	</style>
+
+
+	<script>
+		$(document).ready(function(){
+			$("#menulist li ul").hide();
+			$("#menulist li ").hover(
+
+				function(){
+					$(this).find("ul").slideDown("fast");
+					$(this).find("a.first").addClass("active");
+				},function(){
+					$(this).find(".submenu").fadeOut("fast");
+					$(this).find("a").removeClass("active");
+
+				}
+			)
+		});
+	</script>
+
+
+
+</head>
+<body>
+	<div id="banner">
+		我是空白
+		
+	</div>
+
+	<div id="menu">
+		<ul id="menulist">
+			<li><a href="#">產品服務</a>
+				<ul class="submenu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>	
+			</li>
+
+			<li><a href="#">資訊管理</a>
+				<ul class="submenu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>	
+			</li>
+
+			<li><a href="#">常見問題</a>
+				<ul class="submenu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>	
+			</li>
+
+			<li><a href="#">登入專區</a>
+				<ul class="submenu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+				</ul>	
+			</li>
+
+			<li><a href="#">聯絡我們</a></li> 
+	</div>
+
+	<div id="pictureAll">
+		<div id="photo">
+		<img id="sun"src="img/01.jpg"
+				width="100%"
+				height="100%">
+	</div>
+	<div id="fold">點擊看更多</div>
+	<div id="con" style="width: 100%;height: 100px;background-color: #005AB5">
+			
+		<br>
+		</div>
+
+<script>
+	$(document).ready(function(){
+		$("#fold").click(function(){
+			$("#con").slideToggle();
+		})
+	});
+</script>		
+
+
+	<div id="agebtn">
+		<hr>
+		年齡:<input type="text" id='age'name="age">
+		<br/>
+		<button id="btn">送出</button>
+		<hr>
+	</div>
+	<script>
+		$('#btn').click(function(){
+			var age=$('#age').val();
+				if(age<"50"&& age>"15"){
+				$('#age').text()
+				
+				}else{
+				$('#age').text()
+				alert('超出範圍');
+				}
+		});
+	</script>
+
+</body>
+</html>
